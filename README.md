@@ -12,7 +12,14 @@ An interactive data analysis dashboard that explores the **cost of living across
 
 ## 📸 Dashboard Preview
 
-> *Screenshots will be added after deployment.*
+### 🌐 World Overview
+![World Overview](assets/screenshot_world_overview.jpg)
+
+### 🏙️ Country & City Explorer
+![Country Explorer](assets/screenshot_country&city_explorer.jpg)
+
+### 🤖 Clustering Analysis — World Map
+![Clustering Map](assets/screenshot_world_overview.jpg)
 
 ---
 
