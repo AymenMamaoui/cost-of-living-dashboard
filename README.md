@@ -1,4 +1,4 @@
-# 🌍 Global Cost of Living Dashboard
+#  Global Cost of Living Dashboard
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B?logo=streamlit&logoColor=white)
@@ -10,20 +10,20 @@ An interactive data analysis dashboard that explores the **cost of living across
 
 ---
 
-## 📸 Dashboard Preview
+##  Dashboard Preview
 
-### 🌐 World Overview
+###  World Overview
 ![World Overview](assets/screenshot_world_overview.jpg)
 
-### 🏙️ Country & City Explorer
+###  Country & City Explorer
 ![Country Explorer](assets/screenshot_country&city_explorer.jpg)
 
-### 🤖 Clustering Analysis — World Map
+###  Clustering Analysis — World Map
 ![Clustering Map](assets/screenshot_world_overview.jpg)
 
 ---
 
-## 🎯 Project Objectives
+##  Project Objectives
 
 - Analyze cost of living data across **hundreds of cities and countries**
 - Visualize key expenses: **rent, food, transportation, utilities, and more**
@@ -33,7 +33,7 @@ An interactive data analysis dashboard that explores the **cost of living across
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 cost-of-living-dashboard/
@@ -68,7 +68,7 @@ cost-of-living-dashboard/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the repository
 
@@ -111,19 +111,19 @@ streamlit run app/main.py
 
 ---
 
-## 📊 Features
+##  Features
 
 | Feature | Description |
 |---|---|
-| 🗺️ World Map | Interactive choropleth map of cost of living by country |
-| 🏙️ City Explorer | Filter and compare cities by expense category |
-| 📈 Expense Breakdown | Bar charts & treemaps for food, rent, transport, etc. |
-| 🤖 KMeans Clustering | Cities grouped by cost profile (budget / mid-range / expensive) |
-| 💡 Affordability Index | Computed score: average salary vs. total cost of living |
+|  World Map | Interactive choropleth map of cost of living by country |
+|  City Explorer | Filter and compare cities by expense category |
+|  Expense Breakdown | Bar charts & treemaps for food, rent, transport, etc. |
+|  KMeans Clustering | Cities grouped by cost profile (budget / mid-range / expensive) |
+|  Affordability Index | Computed score: average salary vs. total cost of living |
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 | Tool | Usage |
 |---|---|
@@ -136,7 +136,7 @@ streamlit run app/main.py
 
 ---
 
-## 📦 Dataset
+##  Dataset
 
 - **Source:** [Kaggle – Global Cost of Living by mvieira101](https://www.kaggle.com/datasets/mvieira101/global-cost-of-living)
 - **Coverage:** 500+ cities across 100+ countries
@@ -144,7 +144,7 @@ streamlit run app/main.py
 
 ---
 
-## 📁 Key Python Modules
+##  Key Python Modules
 
 ### `src/data_loader.py`
 Loads the raw CSV dataset and returns a clean Pandas DataFrame.
@@ -160,19 +160,8 @@ Applies **KMeans clustering** to segment cities into cost profiles and returns c
 
 ---
 
-## 🤝 Contributing
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## 👤 Author
+##  Author
 
 **Aymen MAMAOUI**
 - GitHub: [@AymenMamaoui](https://github.com/AymenMamaoui)
