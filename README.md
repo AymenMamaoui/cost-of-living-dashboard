@@ -46,7 +46,6 @@ cost-of-living-dashboard/
 │   └── 01_exploration.ipynb      # Exploratory Data Analysis (EDA)
 │
 ├── src/                          # Core Python modules
-│   ├── __init__.py
 │   ├── data_loader.py            # Load dataset
 │   ├── data_cleaning.py          # Clean & preprocess data
 │   ├── analysis.py               # Affordability index & statistics

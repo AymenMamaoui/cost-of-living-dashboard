@@ -1,3 +1,5 @@
+# Sert pour le chargement des données (raw/processed)
+
 import pandas as pd
 import os
 
