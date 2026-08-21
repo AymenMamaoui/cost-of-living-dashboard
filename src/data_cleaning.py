@@ -1,3 +1,5 @@
+# Sert pour effectuer les traitements sur les données après chargement
+
 import pandas as pd
 
 RENAME_MAP = {

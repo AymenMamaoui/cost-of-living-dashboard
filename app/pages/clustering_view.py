@@ -1,6 +1,5 @@
 import streamlit as st
 import plotly.express as px
-import plotly.graph_objects as go
 import pandas as pd
 from src.clustering import get_cluster_summary, CLUSTER_FEATURES
 
