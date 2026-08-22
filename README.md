@@ -6,7 +6,9 @@
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-KMeans-F7931E?logo=scikit-learn&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+
 An interactive data analysis dashboard that explores the **cost of living across cities and countries worldwide** — covering housing, food, transportation, and more. Built with Python, Streamlit, and Plotly, with KMeans clustering to group cities by cost profile.
+
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://cost-of-living-dashboard-aymenmm.streamlit.app/)
 ---
 
