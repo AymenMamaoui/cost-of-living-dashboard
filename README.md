@@ -19,7 +19,7 @@ An interactive data analysis dashboard that explores the **cost of living across
 ![Country Explorer](assets/screenshot_country&city_explorer.jpg)
 
 ###  Clustering Analysis — World Map
-![Clustering Map](assets/screenshot_world_overview.jpg)
+![Clustering Map](assets/screenshot_clustering_analysis.jpg)
 
 ---
 
