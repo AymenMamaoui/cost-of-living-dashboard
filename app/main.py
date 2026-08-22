@@ -12,15 +12,19 @@ from src.clustering import apply_kmeans
 # Page config
 st.set_page_config(
     page_title="Global Cost of Living",
-    page_icon="🌍",
+    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Cacher la navigation automatique de Streamlit
+# Cacher la navigation automatique de Streamlit et harmoniser les styles globaux
 st.markdown("""
     <style>
         [data-testid="stSidebarNav"] {display: none;}
+        /* Amélioration de la typographie et des espacements globaux */
+        .block-container {
+            padding-top: 2rem;
+        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -39,28 +43,29 @@ def load_data():
 df = load_data()
 
 # Sidebar navigation
-st.sidebar.image("https://cdn-icons-png.flaticon.com/512/44/44386.png", width=60)
-st.sidebar.title("🌍 Cost of Living")
+st.sidebar.image("https://cdn-icons-png.flaticon.com/512/44/44386.png", width=50)
+st.sidebar.title("Cost of Living")
 st.sidebar.markdown("---")
+
 
 page = st.sidebar.radio(
     "Navigation",
-    ["🌐 World Overview", "🏙️ Country & City Explorer", "🤖 Clustering Analysis"]
+    ["World Overview", "Country & City Explorer", "Clustering Analysis"]
 )
 
 st.sidebar.markdown("---")
 st.sidebar.markdown(
-    "📊 Data source: [Numbeo via Kaggle](https://www.kaggle.com/datasets/mvieira101/global-cost-of-living)"
+    "**Data source:** [Numbeo via Kaggle](https://www.kaggle.com/datasets/mvieira101/global-cost-of-living)"
 )
-st.sidebar.markdown(f"🏙️ **{len(df)}** cities | 🌍 **{df['country'].nunique()}** countries")
+st.sidebar.markdown(f"**{len(df)}** cities | **{df['country'].nunique()}** countries")
 
-#  Route pages
-if page == "🌐 World Overview":
+# Route pages
+if page == "World Overview":
     from app.pages.overview import show
     show(df)
-elif page == "🏙️ Country & City Explorer":
+elif page == "Country & City Explorer":
     from app.pages.country_view import show
     show(df)
-elif page == "🤖 Clustering Analysis":
+elif page == "Clustering Analysis":
     from app.pages.clustering_view import show
     show(df)

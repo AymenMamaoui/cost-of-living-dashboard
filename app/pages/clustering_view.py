@@ -4,13 +4,13 @@ import pandas as pd
 from src.clustering import get_cluster_summary, CLUSTER_FEATURES
 
 COLOR_MAP = {
-    'Budget': '#2ecc71',
-    'Mid-Range': '#f39c12',
-    'Expensive': '#e74c3c'
+    'Budget': '#10B981',
+    'Mid-Range': '#F59E0B',
+    'Expensive': '#EF4444'
 }
 
 def show(df: pd.DataFrame):
-    st.title("🤖 KMeans Clustering Analysis")
+    st.title("KMeans Clustering Analysis")
     st.markdown("Cities grouped into **3 cost profiles** using KMeans clustering.")
     st.markdown("---")
 
@@ -18,7 +18,7 @@ def show(df: pd.DataFrame):
     col1, col2 = st.columns([1, 2])
 
     with col1:
-        st.subheader("📊 Cluster Distribution")
+        st.subheader("Cluster Distribution")
         cluster_counts = (
             df['cluster_label']
             .value_counts()
@@ -33,11 +33,15 @@ def show(df: pd.DataFrame):
             color='Cluster',
             color_discrete_map=COLOR_MAP
         )
-        fig_pie.update_layout(height=350)
+        fig_pie.update_layout(
+            height=350,
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)'
+        )
         st.plotly_chart(fig_pie, use_container_width=True)
 
     with col2:
-        st.subheader("📈 Cluster Summary")
+        st.subheader("Cluster Summary")
         summary = get_cluster_summary(df)
         summary_display = summary.rename(columns={
             'meal_cheap_restaurant': 'Cheap Meal ($)',
@@ -56,7 +60,7 @@ def show(df: pd.DataFrame):
     st.markdown("---")
 
     # World Map by Cluster
-    st.subheader("🗺️ Clusters by Country")
+    st.subheader("Clusters by Country")
 
     country_cluster_label = (
         df.groupby('country')['cluster_label']
@@ -75,14 +79,16 @@ def show(df: pd.DataFrame):
     )
     fig_map.update_layout(
         height=500,
-        margin=dict(l=0, r=0, t=40, b=0)
+        margin=dict(l=0, r=0, t=40, b=0),
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)'
     )
     st.plotly_chart(fig_map, use_container_width=True)
 
     st.markdown("---")
 
     # Scatter Salary vs Rent
-    st.subheader("💡 Salary vs Rent by Cluster")
+    st.subheader("Salary vs Rent by Cluster")
 
     fig_scatter = px.scatter(
         df,
@@ -98,15 +104,18 @@ def show(df: pd.DataFrame):
         },
         title='Salary vs Rent by City'
     )
-    fig_scatter.update_layout(height=450)
+    fig_scatter.update_layout(
+        height=450,
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)'
+    )
     st.plotly_chart(fig_scatter, use_container_width=True)
 
     st.markdown("---")
 
     # Explore Cities by Cluster
-    st.subheader("🔍 Explore Cities by Cluster")
+    st.subheader("Explore Cities by Cluster")
 
-    # Utilise les vraies valeurs du DataFrame
     cluster_options = sorted(df['cluster_label'].unique().tolist())
     selected_cluster = st.selectbox("Select Cluster", cluster_options)
 
@@ -134,7 +143,7 @@ def show(df: pd.DataFrame):
     st.dataframe(filtered_display, use_container_width=True, hide_index=True)
 
     # Bar Chart — Top 10 Most Affordable in Cluster
-    st.subheader(f"🏆 Top 10 Most Affordable Cities — {selected_cluster}")
+    st.subheader(f"Top 10 Most Affordable Cities — {selected_cluster}")
     top10 = filtered_display.head(10)
 
     fig_top = px.bar(
@@ -149,7 +158,9 @@ def show(df: pd.DataFrame):
     )
     fig_top.update_layout(
         coloraxis_showscale=False,
-        height=400
+        height=400,
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)'
     )
     fig_top.update_yaxes(autorange="reversed")
     st.plotly_chart(fig_top, use_container_width=True)

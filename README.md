@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 An interactive data analysis dashboard that explores the **cost of living across cities and countries worldwide** — covering housing, food, transportation, and more. Built with Python, Streamlit, and Plotly, with KMeans clustering to group cities by cost profile.
-
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://cost-of-living-dashboard-aymenmm.streamlit.app/)
 ---
 
 ##  Dashboard Preview
@@ -41,6 +41,9 @@ cost-of-living-dashboard/
 ├── data/
 │   ├── raw/                      # Original dataset (untouched)
 │   └── processed/                # Cleaned & transformed data
+│
+├── .streamlit/
+│   └── config.toml               # UI configurations
 │
 ├── notebooks/
 │   └── 01_exploration.ipynb      # Exploratory Data Analysis (EDA)
